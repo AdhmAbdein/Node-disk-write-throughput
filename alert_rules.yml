@@ -1,0 +1,14 @@
+groups:
+  - name: node_disk_write_throughput
+    rules:
+      - alert: node_disk_write_throughput_alert
+        expr: node_disk_write_throughput_rule < 1000000
+        labels:
+          node1: node_disk_write_throughput
+        annotations:
+          summary: "node disk write throughput in {{ $labels.instance }}"
+          description: "node disk write throughput is {{ $value }}"
+
+
+
+                     

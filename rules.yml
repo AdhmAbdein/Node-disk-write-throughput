@@ -1,0 +1,9 @@
+
+groups:
+  - name: node_disk_write_throughput
+    rules:
+      - record: node_disk_write_throughput_rule
+        expr: rate(node_disk_write_bytes_total[1m])
+        labels:
+          node1: node_disk_write_throughput
+
